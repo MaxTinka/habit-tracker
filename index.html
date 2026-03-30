@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker | Build Better Habits</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-leaf"></i> Habit Tracker</h1>
+                <p class="tagline">Build better habits, one day at a time</p>
+            </div>
+            <div class="date-display">
+                <i class="fas fa-calendar-alt"></i>
+                <span id="currentDate"></span>
+            </div>
+        </header>
+
+        <!-- Stats Dashboard -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <i class="fas fa-fire"></i>
+                <div class="stat-info">
+                    <span class="stat-value" id="currentStreak">0</span>
+                    <span class="stat-label">Current Streak</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-trophy"></i>
+                <div class="stat-info">
+                    <span class="stat-value" id="bestStreak">0</span>
+                    <span class="stat-label">Best Streak</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-check-circle"></i>
+                <div class="stat-info">
+                    <span class="stat-value" id="totalCompletions">0</span>
+                    <span class="stat-label">Total Completions</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-chart-line"></i>
+                <div class="stat-info">
+                    <span class="stat-value" id="completionRate">0%</span>
+                    <span class="stat-label">Completion Rate</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Habit Section -->
+        <div class="add-habit-card">
+            <h3><i class="fas fa-plus-circle"></i> Add New Habit</h3>
+            <div class="add-habit-form">
+                <input type="text" id="habitName" placeholder="Habit name (e.g., Morning Run)" class="form-input">
+                <select id="habitColor" class="form-select">
+                    <option value="#667eea">💜 Purple</option>
+                    <option value="#48bb78">💚 Green</option>
+                    <option value="#ed8936">🧡 Orange</option>
+                    <option value="#f56565">❤️ Red</option>
+                    <option value="#4299e1">💙 Blue</option>
+                    <option value="#9f7aea">💜 Lavender</option>
+                </select>
+                <button id="addHabitBtn" class="btn btn-primary"><i class="fas fa-plus"></i> Add Habit</button>
+            </div>
+        </div>
+
+        <!-- Habits List -->
+        <div class="habits-container">
+            <h3><i class="fas fa-list-check"></i> Your Habits</h3>
+            <div id="habitsList" class="habits-list">
+                <!-- Habits will appear here -->
+            </div>
+        </div>
+
+        <!-- Reset Data Button -->
+        <div class="footer-actions">
+            <button id="resetBtn" class="btn btn-outline"><i class="fas fa-undo-alt"></i> Reset All Data</button>
+            <button id="exportBtn" class="btn btn-outline"><i class="fas fa-download"></i> Export Data</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
